@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Главная</title>
+</head>
+
+<body>
+
+    <div class="wrapper" style="padding: 50px;">
+        <a style="display: block; margin-bottom: 30px; font-size: 20px;" href="dashboard.html">Дашбоард</a>
+        <a style="display: block; margin-bottom: 30px; font-size: 20px;" href="dashboard2.html">Дашбоард (2 вид тарифов)</a>
+        <a style="display: block; margin-bottom: 30px; font-size: 20px;" href="dashboard-admin.html">Админ</a>
+        <button style="width: 250px; height: 50px; margin-bottom: 30px;" type='button' class='btn btn-info btn-lg' data-toggle='modal' data-target='#modal1'>Modal 1</button>
+        <button style="width: 250px; height: 50px; margin-bottom: 30px;" type='button' class='btn btn-info btn-lg' data-toggle='modal' data-target='#modal2'>Modal 2</button>
+        <button style="width: 250px; height: 50px; margin-bottom: 30px;" type='button' class='btn btn-info btn-lg' data-toggle='modal' data-target='#modal3'>Modal 3</button>
+        <button style="width: 250px; height: 50px; margin-bottom: 30px;" type='button' class='btn btn-info btn-lg' data-toggle='modal' data-target='#modal4'>Modal 4</button>
+    </div>
+
+    <div id='modal1' class='modal fade' role='dialog'>
+        <div class='modal-dialog'>
+
+            <div class="modal__top">
+                <div class="modal__title title">Добавить работы</div>
+                <button type='button' class='close' data-dismiss='modal'>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18.5074 16.1219L12.3856 10L18.5074 3.87813C19.1684 3.2172 19.1684 2.15313 18.5074 1.49219C17.8465 0.831256 16.7824 0.831256 16.1215 1.49219L9.99961 7.61407L3.87774 1.49219C3.2168 0.831256 2.15274 0.831256 1.4918 1.49219C0.830859 2.15313 0.830859 3.2172 1.4918 3.87813L7.61368 10L1.4918 16.1219C0.830859 16.7828 0.830859 17.8469 1.4918 18.5078C2.15274 19.1688 3.2168 19.1688 3.87774 18.5078L9.99961 12.386L16.1215 18.5078C16.7824 19.1688 17.8465 19.1688 18.5074 18.5078C19.1637 17.8469 19.1637 16.7781 18.5074 16.1219Z" fill="#E3DED8"/>
+                    </svg>
+                </button>
+            </div>
+
+            <form class="modal__form">
+                <fieldset class='modal__form-group form-group'>
+                    <input type='text' placeholder="Тема обращения" />
+                </fieldset>
+                <div class="modal__form-groups">
+                    <fieldset class='modal__form-group modal__form-group--date form-group'>
+                        <input type='date' />
+                    </fieldset>
+                    <fieldset class='modal__form-group modal__form-group--min form-group'>
+                        <input type='text' / placeholder="Минут потрачено">
+                    </fieldset>
+                    <fieldset class='modal__form-group modal__form-group--user form-group'>
+                        <select>
+                            <option>Арслангалин Вадим</option>
+                            <option>Арслангалин Вадим 2</option>
+                        </select>
+                    </fieldset>
+                </div>
+                <div class="modal__form-bottom">
+                    <button class="modal__form-btn btn btn-brown">Добавить</button>
+                    <div class="modal__form-hint">
+                        Для портала <br>
+                        <a href="">sneg.bitrix24.ru</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id='modal2' class='modal fade' role='dialog'>
+        <div class='modal-dialog'>
+
+            <div class="modal__top">
+                <div class="modal__title title">Добавить время</div>
+                <button type='button' class='close' data-dismiss='modal'>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18.5074 16.1219L12.3856 10L18.5074 3.87813C19.1684 3.2172 19.1684 2.15313 18.5074 1.49219C17.8465 0.831256 16.7824 0.831256 16.1215 1.49219L9.99961 7.61407L3.87774 1.49219C3.2168 0.831256 2.15274 0.831256 1.4918 1.49219C0.830859 2.15313 0.830859 3.2172 1.4918 3.87813L7.61368 10L1.4918 16.1219C0.830859 16.7828 0.830859 17.8469 1.4918 18.5078C2.15274 19.1688 3.2168 19.1688 3.87774 18.5078L9.99961 12.386L16.1215 18.5078C16.7824 19.1688 17.8465 19.1688 18.5074 18.5078C19.1637 17.8469 19.1637 16.7781 18.5074 16.1219Z" fill="#E3DED8"/>
+                    </svg>
+                </button>
+            </div>
+
+            <form class="modal__form">
+                <div class="modal__form-groups">
+                    <fieldset class='modal__form-group modal__form-group--date form-group'>
+                        <input type='date' />
+                    </fieldset>
+                    <fieldset class='modal__form-group modal__form-group--min form-group'>
+                        <input type='text' / placeholder="Минут потрачено">
+                    </fieldset>
+                    <fieldset class='modal__form-group modal__form-group--user form-group'>
+                        <select>
+                            <option>Арслангалин Вадим</option>
+                            <option>Арслангалин Вадим 2</option>
+                        </select>
+                    </fieldset>
+                </div>
+                <div class="modal__form-bottom">
+                    <button class="modal__form-btn btn btn-brown">Добавить</button>
+                    <div class="modal__form-hint">
+                        Для портала <br>
+                        <a href="">sneg.bitrix24.ru</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id='modal3' class='modal modal2 fade' role='dialog'>
+        <div class='modal-dialog'>
+
+            <div class="modal__top">
+                <div class="modal__title title">Изменить тариф</div>
+                <button type='button' class='close' data-dismiss='modal'>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18.5074 16.1219L12.3856 10L18.5074 3.87813C19.1684 3.2172 19.1684 2.15313 18.5074 1.49219C17.8465 0.831256 16.7824 0.831256 16.1215 1.49219L9.99961 7.61407L3.87774 1.49219C3.2168 0.831256 2.15274 0.831256 1.4918 1.49219C0.830859 2.15313 0.830859 3.2172 1.4918 3.87813L7.61368 10L1.4918 16.1219C0.830859 16.7828 0.830859 17.8469 1.4918 18.5078C2.15274 19.1688 3.2168 19.1688 3.87774 18.5078L9.99961 12.386L16.1215 18.5078C16.7824 19.1688 17.8465 19.1688 18.5074 18.5078C19.1637 17.8469 19.1637 16.7781 18.5074 16.1219Z" fill="#E3DED8"/>
+                    </svg>
+                </button>
+            </div>
+
+            <form class="modal__form">
+                <fieldset class='modal__form-group form-group'>
+                    <select>
+                        <option>Лайт (360 минут за 15 000 ₽)</option>
+                        <option>Лайт (360 минут за 15 000 ₽) 2</option>
+                    </select>
+                </fieldset>
+                <div class="modal__form-bottom">
+                    <button class="modal__form-btn btn btn-brown">Добавить</button>
+                    <div class="modal__form-hint">
+                        Для портала <br>
+                        <a href="">sneg.bitrix24.ru</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id='modal4' class='modal modal2 fade' role='dialog'>
+        <div class='modal-dialog'>
+
+            <div class="modal__top">
+                <div class="modal__title title">Изменить ответственного</div>
+                <button type='button' class='close' data-dismiss='modal'>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18.5074 16.1219L12.3856 10L18.5074 3.87813C19.1684 3.2172 19.1684 2.15313 18.5074 1.49219C17.8465 0.831256 16.7824 0.831256 16.1215 1.49219L9.99961 7.61407L3.87774 1.49219C3.2168 0.831256 2.15274 0.831256 1.4918 1.49219C0.830859 2.15313 0.830859 3.2172 1.4918 3.87813L7.61368 10L1.4918 16.1219C0.830859 16.7828 0.830859 17.8469 1.4918 18.5078C2.15274 19.1688 3.2168 19.1688 3.87774 18.5078L9.99961 12.386L16.1215 18.5078C16.7824 19.1688 17.8465 19.1688 18.5074 18.5078C19.1637 17.8469 19.1637 16.7781 18.5074 16.1219Z" fill="#E3DED8"/>
+                    </svg>
+                </button>
+            </div>
+
+            <form class="modal__form">
+                <fieldset class='modal__form-group form-group'>
+                    <select>
+                        <option>Арслангалин Вадим</option>
+                        <option>Арслангалин Вадим 2</option>
+                    </select>
+                </fieldset>
+                <div class="modal__form-bottom">
+                    <button class="modal__form-btn btn btn-brown">Добавить</button>
+                    <div class="modal__form-hint">
+                        Для портала <br>
+                        <a href="">sneg.bitrix24.ru</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/swiper.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
