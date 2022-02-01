@@ -27,6 +27,8 @@ function slider() {
 }
 
 $(document).ready(function() {
+    $(".select").niceSelect()
+
     $(".tab").click(function() {
         let path = $(this).attr("data-tab-path")
         $(".tab").removeClass("tab--active")
@@ -39,7 +41,7 @@ $(document).ready(function() {
         var theEvent = evt || window.event;
         var key = theEvent.keyCode || theEvent.which;
         key = String.fromCharCode(key);
-        var regex = /[0-9]|\./;
+        var regex = /[0-9]/;
         if (!regex.test(key)) {
             theEvent.returnValue = false;
             if (theEvent.preventDefault) theEvent.preventDefault();
