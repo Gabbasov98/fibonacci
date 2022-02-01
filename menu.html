@@ -14,7 +14,7 @@
 
 <body>
 
-    <div class="wrapper" style="padding: 50px;">
+    <div class="wrapper" style="padding: 50px; background: #000;">
         <a style="display: block; margin-bottom: 30px; font-size: 20px;" href="dashboard.html">Дашбоард</a>
         <a style="display: block; margin-bottom: 30px; font-size: 20px;" href="dashboard2.html">Дашбоард (2 вид тарифов)</a>
         <a style="display: block; margin-bottom: 30px; font-size: 20px;" href="dashboard-admin.html">Админ</a>
@@ -45,7 +45,13 @@
                         <input type='date' />
                     </fieldset>
                     <fieldset class='modal__form-group modal__form-group--min form-group'>
-                        <input type='text' / placeholder="Минут потрачено">
+                        <input type='number' step="1" onkeypress='validate(event)' / placeholder="Минут потрачено">
+                        <select>
+                            <option>00 мин.</option>
+                            <option>15 мин.</option>
+                            <option>30 мин.</option>
+                            <option>45 мин.</option>
+                        </select>
                     </fieldset>
                     <fieldset class='modal__form-group modal__form-group--user form-group'>
                         <select>
@@ -83,7 +89,13 @@
                         <input type='date' />
                     </fieldset>
                     <fieldset class='modal__form-group modal__form-group--min form-group'>
-                        <input type='text' / placeholder="Минут потрачено">
+                        <input type='number' step="1" onkeypress='validate(event)' / placeholder="Минут потрачено">
+                        <select>
+                            <option>00 мин.</option>
+                            <option>15 мин.</option>
+                            <option>30 мин.</option>
+                            <option>45 мин.</option>
+                        </select>
                     </fieldset>
                     <fieldset class='modal__form-group modal__form-group--user form-group'>
                         <select>

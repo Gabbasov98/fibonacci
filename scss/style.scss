@@ -798,7 +798,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 .modal {
     &-dialog {
-        width: 700px;
+        width: 780px;
         background: #FAF7F4;
         border-radius: 8px;
         padding: 40px;
@@ -819,6 +819,12 @@ input[type="date"]::-webkit-calendar-picker-indicator {
             align-items: center;
             .modal__form-group {
                 margin-bottom: 0 !important;
+            }
+            @media screen and (max-width: 780px) {
+                display: block;
+                .modal__form-group {
+                    margin: 0 0 20px 0 !important;
+                }
             }
         }
         &-group {
@@ -842,12 +848,29 @@ input[type="date"]::-webkit-calendar-picker-indicator {
                 flex-shrink: 0;
             }
             &--min {
-                width: 160px;
+                width: 240px;
                 flex-shrink: 0;
                 margin: 0 20px;
+                position: relative;
+                select {
+                    position: absolute;
+                    right: 0;
+                    width: 80px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    padding: 0;
+                    border: none;
+                    background-color: transparent;
+                }
+                input {
+                    padding-right: 83px;
+                }
             }
             &--user {
                 flex-grow: 1;
+            }
+            @media screen and (max-width: 780px) {
+                width: 100%;
             }
         }
         &-bottom {

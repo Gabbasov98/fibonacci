@@ -1018,7 +1018,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .modal-dialog {
-  width: 700px;
+  width: 780px;
   background: #FAF7F4;
   border-radius: 8px;
   padding: 40px;
@@ -1042,6 +1042,14 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .modal__form-groups .modal__form-group {
   margin-bottom: 0 !important;
 }
+@media screen and (max-width: 780px) {
+  .modal__form-groups {
+    display: block;
+  }
+  .modal__form-groups .modal__form-group {
+    margin: 0 0 20px 0 !important;
+  }
+}
 .modal__form-group {
   margin: 0;
 }
@@ -1064,12 +1072,31 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   flex-shrink: 0;
 }
 .modal__form-group--min {
-  width: 160px;
+  width: 240px;
   flex-shrink: 0;
   margin: 0 20px;
+  position: relative;
+}
+.modal__form-group--min select {
+  position: absolute;
+  right: 0;
+  width: 80px;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+.modal__form-group--min input {
+  padding-right: 83px;
 }
 .modal__form-group--user {
   flex-grow: 1;
+}
+@media screen and (max-width: 780px) {
+  .modal__form-group {
+    width: 100%;
+  }
 }
 .modal__form-bottom {
   display: flex;
