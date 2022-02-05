@@ -392,6 +392,89 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   color: #000;
 }
 
+.select2-container .select2-selection--single {
+  background: #fff !important;
+  padding: 0;
+  border: 1px solid #E3DED8;
+  border-radius: 4px;
+  height: 50px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-position: right 13px center;
+  font-size: 15px;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+  width: 15px;
+  height: 18px;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-image: url(../img/arrow.svg);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow b {
+  display: none;
+}
+
+.select2-search--dropdown .select2-search__field {
+  display: none;
+}
+
+.select2-dropdown {
+  margin-top: 1px;
+  background: #FFFFFF;
+  border: 1px solid #E3DED8;
+  box-shadow: 0px 5px 15px rgba(164, 156, 147, 0.5);
+  border-radius: 5px;
+}
+
+.select2-container--default .select2-results > .select2-results__options {
+  max-height: 185px;
+}
+.select2-container--default .select2-results > .select2-results__options::-webkit-scrollbar {
+  width: 14px;
+  padding: 0 3px;
+  /* ширина scrollbar */
+}
+.select2-container--default .select2-results > .select2-results__options::-webkit-scrollbar-track {
+  background: transparent;
+  /* цвет дорожки */
+}
+.select2-container--default .select2-results > .select2-results__options::-webkit-scrollbar-thumb {
+  background-color: #DDB47E;
+  /* цвет плашки */
+  border-radius: 15px;
+  /* закругления плашки */
+  border: 4px solid #fff;
+  /* padding вокруг плашки */
+}
+
+.select2-search--dropdown {
+  padding: 0;
+}
+
+.select2-results__option {
+  border-radius: 0;
+  padding: 0 15px;
+  height: 36px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  border: none;
+  transition: all .3s;
+}
+
+.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
+  background: linear-gradient(0deg, #F9F3D7, #F9F3D7), linear-gradient(0deg, #F9F3D7, #F9F3D7), linear-gradient(0deg, #F9F3D7, #F9F3D7), linear-gradient(0deg, #F9F3D7, #F9F3D7), linear-gradient(0deg, #F9F3D7, #F9F3D7), linear-gradient(0deg, #F9F3D7, #F9F3D7), linear-gradient(0deg, #F9F3D7, #F9F3D7), #F9F3D7;
+  color: #A97D41;
+  font-weight: 400;
+}
+
 .header {
   display: flex;
   align-items: center;
@@ -554,14 +637,13 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   width: 350px;
   position: relative;
 }
-.dashboard-users__add-block .select {
+.dashboard-users__add-block .select2 {
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
-  background: transparent !important;
 }
-.dashboard-users__add-block .select .current {
+.dashboard-users__add-block .select2-container .select2-selection--single {
   cursor: pointer;
   opacity: 0;
 }
@@ -1095,12 +1177,14 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   margin-left: 10px;
   flex-shrink: 0;
 }
-.client-stat__select .select {
+.client-stat__select .select2 {
   flex-grow: 1;
-  height: 100%;
+}
+.client-stat__select .select2-container .select2-selection--single {
+  height: 48px;
   border: none;
 }
-.client-stat__select .select .list {
+.client-stat__select .select2-container .select2-selection--single .select2-container--default .select2-results > .select2-results__options {
   max-height: 370px;
 }
 
@@ -1151,8 +1235,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   border-radius: 4px;
   box-shadow: inset 0px 2px 5px rgba(234, 229, 225, 0.5);
 }
-.modal__form-group .select {
-  width: 100%;
+.modal__form-group .select2 {
+  width: 100% !important;
   height: 50px;
   border-radius: 4px;
   box-shadow: inset 0px 2px 5px rgba(234, 229, 225, 0.5);
@@ -1167,13 +1251,15 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   margin: 0 20px;
   position: relative;
 }
-.modal__form-group--min .select {
+.modal__form-group--min .select2 {
   box-shadow: none;
   top: 0;
   right: 0;
-  width: 90px;
+  width: 90px !important;
   height: 100%;
   position: absolute;
+}
+.modal__form-group--min .select2-container .select2-selection--single {
   border: none !important;
   background: transparent !important;
 }

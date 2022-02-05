@@ -27,7 +27,7 @@ function slider() {
 }
 
 $(document).ready(function() {
-    $(".select").niceSelect()
+    $(".select").select2()
 
     $(".tab").click(function() {
         let path = $(this).attr("data-tab-path")
