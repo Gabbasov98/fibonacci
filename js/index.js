@@ -47,4 +47,14 @@ $(document).ready(function() {
             if (theEvent.preventDefault) theEvent.preventDefault();
         }
     })
+
+    $(".select2-selection__choice").click(function() {
+        $(".select2").removeClass("select2-container--open")
+        $(".select2").removeClass("select2-container--open")
+        $(".select2").removeClass("select2-container--open")
+    })
+
+
+
+
 })

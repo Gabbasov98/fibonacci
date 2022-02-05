@@ -611,11 +611,21 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 .dashboard-users {
   padding: 50px 40px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 @media screen and (max-width: 992px) {
   .dashboard-users {
     padding: 30px 25px;
   }
+}
+.dashboard-users__tab {
+  height: 100%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
 }
 .dashboard-users__add {
   justify-content: flex-start;
@@ -628,6 +638,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   color: #0056A5;
   width: 100%;
   height: 50px;
+  margin-bottom: 150px;
 }
 .dashboard-users__add svg {
   margin-right: 10px;
@@ -635,6 +646,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .dashboard-users__add-block {
   margin-top: 43px;
   width: 350px;
+  height: 50px;
   position: relative;
 }
 .dashboard-users__add-block .select2 {
@@ -653,6 +665,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   flex-wrap: wrap;
   margin-top: 20px;
   margin-bottom: 100px;
+  display: none;
 }
 .dashboard-users__item {
   margin: 0 10px 10px 0;
@@ -673,6 +686,49 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   width: 160px;
   height: 48px;
   font-size: 16px;
+}
+.dashboard-users .select2-container--default .select2-selection--multiple {
+  border: none;
+  background-color: transparent;
+  height: 100%;
+}
+.dashboard-users .select2-selection__rendered {
+  position: absolute;
+  top: 100%;
+  margin-top: 20px;
+  display: flex !important;
+  width: 1010px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.dashboard-users .select2-container--default .select2-selection--multiple .select2-selection__choice {
+  margin: 0 10px 10px 0;
+  background: #F9F3D7;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  height: 40px;
+  padding: 0 13px;
+  font-size: 14px;
+  border: none;
+}
+.dashboard-users .select2-container--default .select2-selection--multiple .select2-selection__choice-delete {
+  margin-left: 13px;
+  flex-shrink: 0;
+}
+.dashboard-users .select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+  order: 2;
+  margin-left: 12px;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='10' height='10' viewBox='0 0 10 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.2539 8.06093L6.19296 4.99999L9.2539 1.93905C9.58437 1.60858 9.58437 1.07655 9.2539 0.746082C8.92343 0.415613 8.3914 0.415613 8.06093 0.746082L4.99999 3.80702L1.93905 0.746082C1.60858 0.415613 1.07655 0.415613 0.746082 0.746082C0.415613 1.07655 0.415613 1.60858 0.746082 1.93905L3.80702 4.99999L0.746082 8.06093C0.415613 8.3914 0.415613 8.92343 0.746082 9.2539C1.07655 9.58437 1.60858 9.58437 1.93905 9.2539L4.99999 6.19296L8.06093 9.2539C8.3914 9.58437 8.92343 9.58437 9.2539 9.2539C9.58203 8.92343 9.58203 8.38906 9.2539 8.06093Z' fill='%23BDB3A4'/%3E%3C/svg%3E");
+  width: 12px;
+  height: 12px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: static;
+  border: none;
+}
+.dashboard-users .select2-container--default .select2-selection--multiple .select2-selection__choice__remove span {
+  display: none;
 }
 
 .current-tarif__top {
